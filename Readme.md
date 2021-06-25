@@ -9,5 +9,5 @@ Der erste Spielmodie sollte nur das Klassische erste Level des Spiels darstellen
 Der zweite Spielmodie sollte, dass Klassische Spiel mit mehreren Leveln darstellen.
 
 Das Auswählen der Spielmodie erfolgt über ein Hauptmenü, in welchem drei Buttons angelegt wurden, welche auf die Spielmodie, sowie die Quellen verweißt.
-Die Quellen Verweisen auf ein Google Docs Dokument. In diesem sind alle QUellen vorhanden, sowie ein Verweiß auf die GitHub Repository.
+Die Quellen Verweisen auf ein Google Docs Dokument. In diesem sind alle Quellen vorhanden, sowie ein Verweiß auf die GitHub Repository.
 
