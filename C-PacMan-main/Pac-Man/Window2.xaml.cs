@@ -275,18 +275,21 @@ namespace Pac_Man
             return dots;
         }
 
-        public int Collision(rechteckname)
+        public int[] Collision(rechteckname)
         {
             int collision = 0;
             int x;
             int y;
-            int collom;
-            int row;
+            int collom = 0;
+            int row = 0;
             x = Canvas.GetLeft();
             y = Canvas.GetTop();
             collom = (x - (x % 32)) / 32;
             row = (x - (x % 32)) / 32;
-            if (map[,])
+            if (map[row,collom] == 1)
+            {
+
+            }
         }
     }
 }
