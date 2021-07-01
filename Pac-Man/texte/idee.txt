@@ -1,6 +1,0 @@
-﻿Hallo
-hier
-ist 
-ein
-Text
-Dokument
