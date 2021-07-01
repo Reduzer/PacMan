@@ -31,9 +31,12 @@ namespace Pac_Man
         public bool hoch, runter, rechts, links;
         public bool hochnicht, runternicht, rechtsnicht, linksnicht = false;
 
-        public double geschwindigkeit = 5;
+        public double geschwindigkeit = 4;
         //double geistergeschwindigkeit = 3;
         public bool intersection;
+
+        public bool mapDone = false;
+
 
         #endregion
 
@@ -170,43 +173,51 @@ namespace Pac_Man
                 {1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1},
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
             };
-            for (int i = 0; i < 28; i++)
-            {
-                for(int j = 0; j < 31; j++)
+            if(mapDone == false)
+            { 
+                for (int i = 0; i < 28; i++)
                 {
-                    Rectangle mapTile = new Rectangle();
-                    switch (map[j,i])
+                    for(int j = 0; j < 31; j++)
                     {
-                        case 0:
-                            Waende.Children.Add(mapTile);
-                            Grid.SetColumn(mapTile, i);
-                            Grid.SetRow(mapTile, j);
-                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0));
-                            break;
-                        case 1:
-                            Waende.Children.Add(mapTile);
-                            Grid.SetColumn(mapTile, i);
-                            Grid.SetRow(mapTile, j);
-                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(0, 0, 100));
-                            break;
-                        case 2:
-                            Waende.Children.Add(mapTile);
-                            Grid.SetColumn(mapTile, i);
-                            Grid.SetRow(mapTile, j);
-                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 255, 50));
-                            break;
-                        case 3:
-                            Waende.Children.Add(mapTile);
-                            Grid.SetColumn(mapTile, i);
-                            Grid.SetRow(mapTile, j);
-                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 0, 0));
-                            break;
-                        default:
-                            Waende.Children.Add(mapTile);
-                            Grid.SetColumn(mapTile, i);
-                            Grid.SetRow(mapTile, j);
-                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                            break;
+                        Rectangle mapTile = new Rectangle();
+                        switch (map[j,i])
+                        {
+                            case 0:
+                                Waende.Children.Add(mapTile);
+                                Grid.SetColumn(mapTile, i);
+                                Grid.SetRow(mapTile, j);
+                                mapTile.Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                                break;
+                            case 1:
+                                Waende.Children.Add(mapTile);
+                                Grid.SetColumn(mapTile, i);
+                                Grid.SetRow(mapTile, j);
+                                mapTile.Fill = new SolidColorBrush(Color.FromRgb(0, 0, 70));
+                                mapTile.StrokeThickness = 12;
+                                mapTile.Stroke = new SolidColorBrush(Color.FromRgb(0, 0, 100));
+                                break;
+                            case 2:
+                                Waende.Children.Add(mapTile);
+                                Grid.SetColumn(mapTile, i);
+                                Grid.SetRow(mapTile, j);
+                                mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 255, 50));
+                                mapTile.StrokeThickness = 14;
+                                mapTile.Stroke = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                                break;
+                            case 3:
+                                Waende.Children.Add(mapTile);
+                                Grid.SetColumn(mapTile, i);
+                                Grid.SetRow(mapTile, j);
+                                mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+                                break;
+                            default:
+                                Waende.Children.Add(mapTile);
+                                Grid.SetColumn(mapTile, i);
+                                Grid.SetRow(mapTile, j);
+                                mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                                break;
+                        }
+                        mapDone = true;
                     }
                 }
             }
