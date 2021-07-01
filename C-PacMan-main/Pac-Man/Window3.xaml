@@ -1,0 +1,14 @@
+﻿<Window x:Class="Pac_Man.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pac_Man"
+        mc:Ignorable="d"
+        Title="Pac-Man" Height="800" Width="700">
+    <Canvas x:Name="Spielfeld2" Background="Black" Focusable="true">
+
+        <TextBlock x:Name="TextBlock" Height="62" Width="320" Foreground="White" Background="DimGray" FontSize="40" Canvas.Left="213" Canvas.Top="361"></TextBlock>
+
+    </Canvas>
+</Window>
