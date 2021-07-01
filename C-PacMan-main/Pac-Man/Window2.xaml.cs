@@ -174,33 +174,38 @@ namespace Pac_Man
             {
                 for(int j = 0; j < 31; j++)
                 {
-                    Button mapTile = new Button();
-                    switch (map[i,j])
+                    Rectangle mapTile = new Rectangle();
+                    switch (map[j,i])
                     {
                         case 0:
-                            Grid.SetColumn(mapTile, j);
-                            Grid.SetRow(mapTile, i);
-                            mapTile.Background = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                            Waende.Children.Add(mapTile);
+                            Grid.SetColumn(mapTile, i);
+                            Grid.SetRow(mapTile, j);
+                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                             break;
                         case 1:
-                            Grid.SetColumn(mapTile, j);
-                            Grid.SetRow(mapTile, i);
-                            mapTile.Background = new SolidColorBrush(Color.FromRgb(0, 0, 100));
+                            Waende.Children.Add(mapTile);
+                            Grid.SetColumn(mapTile, i);
+                            Grid.SetRow(mapTile, j);
+                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(0, 0, 100));
                             break;
                         case 2:
-                            Grid.SetColumn(mapTile, j);
-                            Grid.SetRow(mapTile, i);
-                            mapTile.Background = new SolidColorBrush(Color.FromRgb(255, 255, 50));
+                            Waende.Children.Add(mapTile);
+                            Grid.SetColumn(mapTile, i);
+                            Grid.SetRow(mapTile, j);
+                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 255, 50));
                             break;
                         case 3:
-                            Grid.SetColumn(mapTile, j);
-                            Grid.SetRow(mapTile, i);
-                            mapTile.Background = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+                            Waende.Children.Add(mapTile);
+                            Grid.SetColumn(mapTile, i);
+                            Grid.SetRow(mapTile, j);
+                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 0, 0));
                             break;
                         default:
-                            Grid.SetColumn(mapTile, j);
-                            Grid.SetRow(mapTile, i);
-                            mapTile.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                            Waende.Children.Add(mapTile);
+                            Grid.SetColumn(mapTile, i);
+                            Grid.SetRow(mapTile, j);
+                            mapTile.Fill = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                             break;
                     }
                 }

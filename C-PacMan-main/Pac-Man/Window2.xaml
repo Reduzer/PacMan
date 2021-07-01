@@ -8,8 +8,11 @@
         Title="Pac-Man" Height="992" Width="896">
     <Canvas x:Name="Spielfeld" Background="Black" Focusable="true" KeyDown="drehung">
 
-        <Grid Height="992" Width="896">
+        <Grid Height="992" Width="896" Name="Waende" >
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -71,6 +74,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
         </Grid>
+        
         <Label x:Name="Punkte" Background="DimGray" Foreground="White" FontSize="30" FontFamily="Comic Sans MS" FontStyle="Italic" FontWeight="Bold" Canvas.Left="32" Canvas.Top="18"></Label>
         <Label x:Name="Leben" Background="DimGray" Foreground="White" FontSize="30" FontFamily="Comic Sans MS" FontStyle="Italic" FontWeight="Bold" Canvas.Left="433" Canvas.Top="18"></Label>
 
@@ -94,232 +98,6 @@
         <Rectangle x:Name="punkt" Fill="Brown" Width="10" Height="10" Canvas.Left="570" Canvas.Top="323"></Rectangle>
 
 
-        <!--#region Wände -->
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="201" Canvas.Left="53" Canvas.Top="474"></Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue" Width="14" Height="582" Canvas.Left="337" Canvas.Top="390" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="202" Canvas.Left="622" Canvas.Top="485"/>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="201" Canvas.Left="53" Canvas.Top="89"/>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="201" Canvas.Left="622" Canvas.Top="87"/>
-        <Rectangle Tag="Wand" Fill="Blue" Width="14" Height="582" Canvas.Left="338" Canvas.Top="-196" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="111" Canvas.Left="343" Canvas.Top="371" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="112" Canvas.Left="343" Canvas.Top="300" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="85" Canvas.Left="392" Canvas.Top="349" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-180"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="75" Canvas.Top="451" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="600" Canvas.Top="463" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="75" Canvas.Top="256" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="600" Canvas.Top="252" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="126" Canvas.Top="122" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="230" Canvas.Top="122" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="461" Canvas.Top="122" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="558" Canvas.Top="123" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="207" Canvas.Left="211" Canvas.Top="519" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="261" Canvas.Top="569" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="42" Canvas.Left="68" Canvas.Top="547" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="125" Canvas.Top="493" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="147" Canvas.Top="521" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="180"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="213" Canvas.Top="494" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="500" Canvas.Top="494" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="406" Canvas.Top="493" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Tag="Wand" Fill="Blue"  Width="14" Height="58" Canvas.Left="478" Canvas.Top="522" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <!--#endregion-->
 
     </Canvas>
 </Window>
