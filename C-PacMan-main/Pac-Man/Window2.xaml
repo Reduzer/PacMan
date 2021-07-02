@@ -83,7 +83,7 @@
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="45"/>
+                    <RotateTransform Angle="0"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Rectangle.RenderTransform>
@@ -92,24 +92,26 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Rectangle x:Name="ghost1" Width="28" Height="28" Canvas.Left="343" Canvas.Top="229">
+        <Rectangle x:Name="ghost1" Width="28" Height="28" Canvas.Left="384" Canvas.Top="448">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Bilder/Ghost_red.png"></ImageBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle x:Name="ghost2" Width="28" Height="28" Canvas.Left="343" Canvas.Top="270">
+        <Rectangle x:Name="ghost2" Width="28" Height="28" Canvas.Left="416" Canvas.Top="448">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Bilder/Ghost_green.png"></ImageBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle x:Name="ghost3" Width="28" Height="28" Canvas.Left="343" Canvas.Top="313">
+        <Rectangle x:Name="ghost3" Width="28" Height="28" Canvas.Left="448" Canvas.Top="448">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Bilder/Ghost_orange.png"></ImageBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <Rectangle x:Name="ghost4" Width="28" Height="28" Canvas.Left="480" Canvas.Top="448">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Bilder/Ghost_cyan.png"></ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
 
-        <Rectangle x:Name="kirsche" Fill="Red" Width="10" Height="10" Canvas.Left="570" Canvas.Top="364"></Rectangle>
-        <Rectangle x:Name="punktg" Fill="Indigo" Width="10" Height="10" Canvas.Left="522" Canvas.Top="360"></Rectangle>
-        <Rectangle x:Name="punkt" Fill="Brown" Width="10" Height="10" Canvas.Left="570" Canvas.Top="323"></Rectangle>
     </Canvas>
 </Window>
