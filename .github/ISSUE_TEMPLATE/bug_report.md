@@ -15,7 +15,7 @@ Die Einzelnen Schritte:
 1. Mache das '...'
 2. Klicke auf '....'
 3. Mache das '....'
-4. Entstehung des Felhers
+4. Entstehung des Fehlers
 
 **Erwartetes Verhalten**
 Was hast du erwartet?
